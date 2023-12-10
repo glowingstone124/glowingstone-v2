@@ -1,0 +1,17 @@
+:root {
+    --background:#191c1d;
+    --primary-text:#4dd9e6;
+    --primary:#015158;
+    --primary-container:#013134;
+    --highlight-title:#cccccc;
+}
+@font-face {
+    font-family: Inter;
+    src: url("/assets/inter.ttf");
+}
+*{
+    font-family: Inter;
+}
+h1{
+    color: var(--highlight-title);
+}

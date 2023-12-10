@@ -1,0 +1,124 @@
+@import url(theme.css);
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: var(--background);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--highlight-title);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--background);
+}
+
+.rectangle-title {
+    width: 100%;
+    flex-basis: 100%;
+    max-width: 100%; /* 修改为100%适应移动端 */
+    min-height: 300px; /* 适当减小高度 */
+    margin: 20px; /* 调整边距 */
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    background-image: url("/assets/background.png");
+    background-size: cover;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.class {
+    width: 100%; /* 修改为100%适应移动端 */
+    max-width: 100%; /* 修改为100%适应移动端 */
+    min-width: 100%; /* 修改为100%适应移动端 */
+    min-height: 200px; /* 适当减小高度 */
+    margin: 10px; /* 调整边距 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rectangle {
+    width: 100%; /* 修改为100%适应移动端 */
+    max-width: 100%; /* 修改为100%适应移动端 */
+    min-width: 100%; /* 修改为100%适应移动端 */
+    min-height: 200px; /* 适当减小高度 */
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--primary-container);
+    border-radius: 15px;
+    z-index: 1;
+    flex-direction: column; /* 为移动端添加垂直排列 */
+}
+.rectangle-title h1 {
+    color: rgb(81, 79, 76);
+    font-size: 100px;
+    align-self: center;
+    justify-content: center;
+    font-weight: 200;
+}
+
+.rectangle-title p {
+    color: rgb(81, 79, 76);
+    font-size: 20px;
+    align-self: center;
+    justify-content: center;
+}
+.rectangle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.rectangle p {
+    color: var(--primary-text);
+}
+
+.rectangle:hover {
+    transform: translateY(-5px) rotateX(5deg); /* 调整移动端的变化 */
+}
+
+/* 添加媒体查询，根据屏幕宽度调整样式 */
+@media only screen and (max-width: 768px) {
+    .rectangle-title h1 {
+        font-size: 60px; /* 适当调整字体大小 */
+    }
+
+    .rectangle-title p {
+        font-size: 16px; /* 适当调整字体大小 */
+    }
+
+    .rectangle p {
+        font-size: 14px; /* 适当调整字体大小 */
+    }
+}

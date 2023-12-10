@@ -1,0 +1,110 @@
+@import url(theme.css);
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: var(--background);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--highlight-title);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background);
+}
+.rectangle-title {
+    width: 100%;
+    flex-basis: 100%;
+    max-width: 75vw;
+    min-width: 75vw;
+    min-height: 600px;
+    margin: 50px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    background-image: url("/assets/background.png");
+    background-size: cover;
+    border-radius: 15px;
+    margin-bottom: 70px;
+    text-align: center; /* 水平居中 */
+}
+.class{
+    width: 10%;
+    max-width: 25vw;
+    min-width: 100vw;
+    min-height: 400px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+.rectangle-title h1 {
+    color: rgb(81, 79, 76);
+    font-size: 100px;
+    align-self: center;
+    justify-content: center;
+    font-weight: 200;
+}
+
+.rectangle-title p {
+    color: rgb(81, 79, 76);
+    font-size: 20px;
+    align-self: center;
+    justify-content: center;
+}
+
+.rectangle {
+    width: 20%;
+    max-width: 25vw;
+    min-width: 25vw;
+    min-height: 400px;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--primary-container);
+    border-radius: 15px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.rectangle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.rectangle p {
+    color: var(--primary-text);
+}
+
+.rectangle:hover {
+    transform: translateY(-10px) rotateX(10deg);
+}
