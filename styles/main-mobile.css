@@ -74,6 +74,17 @@ body {
     z-index: 1;
     flex-direction: column; /* 为移动端添加垂直排列 */
 }
+.category-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-width: 95vw;
+}
+.category.active {
+    font-weight: bold;
+    color: #007BFF; /* 更改为您喜欢的颜色 */
+}
 .rectangle-title h1 {
     color: rgb(81, 79, 76);
     font-size: 100px;

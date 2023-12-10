@@ -70,7 +70,19 @@ body {
     align-self: center;
     justify-content: center;
 }
-
+.category{
+    padding: 10vw;
+}
+.category-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.category.active {
+    font-weight: bold;
+    color: #007BFF; /* 更改为您喜欢的颜色 */
+}
 .rectangle {
     width: 20%;
     max-width: 25vw;
